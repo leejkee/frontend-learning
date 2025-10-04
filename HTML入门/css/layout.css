@@ -10,7 +10,7 @@
 }
 
 .content {
-  flex: 1; /* 自动撑满中间区域 */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;

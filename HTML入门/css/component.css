@@ -43,7 +43,7 @@
 }
 
 .progress-bar {
-  flex: 1; 
+  flex: 1;
 }
 
 .controls-group {
@@ -54,7 +54,7 @@
   width: 100%;
 }
 
-.btn-group-left{
+.btn-group-left {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -65,8 +65,8 @@
   width: 50px;
   height: 50px;
   background: transparent;
-  border: none;           
-  border-radius: 50%;     
+  border: none;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +79,7 @@
 }
 
 .play-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 191, 255, 0.3);
 }
 
 .player-controls button:hover:not(.play-btn) {
@@ -90,4 +90,32 @@
   width: 24px;
   height: 24px;
   fill: white;
+}
+
+.volume-container {
+  position: relative;
+  display: inline-block;
+}
+
+.volume-popup {
+  position: absolute;
+  bottom: calc(100% + 30px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  display: none;
+  align-items: center;
+}
+
+.volume-slider {
+  appearance: slider-vertical;
+  width: 35px;
+  height: 90px;
+  margin-bottom: 10px;
+}
+
+.volume-value {
+  font-size: 18px;
+  margin-bottom: 2px;
 }

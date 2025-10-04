@@ -10,13 +10,17 @@
 
   <body>
     <div class="player-container">
-      <!-- 标题栏 -->
       <div class="title-bar">MusicPlayer</div>
-      <div class="file-system"></div>
+
+      <div class="open-file">
+        <input type="file" id="file-input" accept=".mp3,audio/*" />
+      </div>
+
       <div class="content">
         <img src="img/dog.jpg" alt="Music Image" class="music-img" />
         <p class="music-title">Music Title</p>
       </div>
+
       <div class="player-controls">
         <div class="progress-container">
           <span class="current-time">00:00</span>
@@ -29,7 +33,6 @@
           />
           <span class="duration-time">00:00</span>
         </div>
-
         <div class="controls-group">
           <div class="btn-group-left">
             <button class="pre-btn">
@@ -44,7 +47,6 @@
               </svg>
             </button>
             <button class="play-btn">
-              <!-- 播放图标（SVG） -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -67,27 +69,38 @@
               </svg>
             </button>
           </div>
-          <button class="volume-btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="white"
-              viewBox="0 0 24 24"
-            >
-              <!-- 喇叭 -->
-              <path d="M5 9v6h4l5 5V4l-5 5H5z"></path>
-              <!-- 声波 -->
-              <path
-                d="M14.5 12c0-1.77 1.02-3.29 2.5-4.03v8.06c-1.48-.74-2.5-2.26-2.5-4.03z"
-              ></path>
-              <path
-                d="M16.5 3.97v2.16c2.89 1.12 5 3.9 5 7.04s-2.11 5.92-5 7.04v2.16c4.01-1.25 7-4.97 7-9.2s-2.99-7.95-7-9.2z"
-              ></path>
-            </svg>
-          </button>
+          <div class="volume-container">
+            <button class="volume-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="white"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 9v6h4l5 5V4l-5 5H5z"></path>
+                <path
+                  d="M14.5 12c0-1.77 1.02-3.29 2.5-4.03v8.06c-1.48-.74-2.5-2.26-2.5-4.03z"
+                ></path>
+                <path
+                  d="M16.5 3.97v2.16c2.89 1.12 5 3.9 5 7.04s-2.11 5.92-5 7.04v2.16c4.01-1.25 7-4.97 7-9.2s-2.99-7.95-7-9.2z"
+                ></path>
+              </svg>
+            </button>
+            <div class="volume-popup">
+              <span class="volume-value">0</span>
+              <input
+                type="range"
+                class="volume-slider"
+                min="0"
+                max="100"
+                value="100"
+                orient="vertical"
+              />
+            </div>
         </div>
       </div>
     </div>
   </body>
+  <script type="module" src="js/main.js"></script>
 </html>
