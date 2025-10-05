@@ -15,9 +15,6 @@ export function initVolumeControl() {
   const volumePopup = document.querySelector(".volume-popup");
   const volumeValue = document.querySelector(".volume-value");
 
-  volumeValue.textContent = 0;
-  volumeSlider.value = 0;
-
   volumeSlider.addEventListener("input", () => {
     const v = volumeSlider.value;
     volumeValue.textContent = v;
