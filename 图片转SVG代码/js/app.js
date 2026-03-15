@@ -47,8 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
   function processImage() {
     if (!originalImage) return;
 
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuiality = 'high';
+
     // 每次重绘原始图像
-    ctx.drawImage(originalImage, 0, 0);
+    ctx.drawImage(originalImage, 0, 0, canvas.width, canvas.height);
 
     // 获取像素矩阵缓冲区
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
